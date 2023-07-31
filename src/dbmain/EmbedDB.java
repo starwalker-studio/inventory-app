@@ -14,7 +14,7 @@ public class EmbedDB {
 
 	private static final InputStream USER_SCRIPT = EmbedDB.class.getResourceAsStream(CREATE_USER_TABLE_SCRIPT);
 
-	private static final InputStream PRODUCT_SCRIPT = EmbedDB.class.getResourceAsStream(CREATE_USER_TABLE_SCRIPT);
+	private static final InputStream PRODUCT_SCRIPT = EmbedDB.class.getResourceAsStream(CREATE_PRODUCT_TABLE_SCRIPT);
 
 	public static Connection connect() {
 		try {
