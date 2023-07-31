@@ -1,4 +1,4 @@
- Download the .zip from the web site: https://starwalker-code.com/
+ Download the .zip from the web site: https://starwalker-code.com/portfolio
 
  EXCTRACT INTO A FOLDER!!
 
