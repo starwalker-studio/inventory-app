@@ -1,6 +1,6 @@
  Download the .zip from the web site: https://starwalker-code.com/portfolio
 
- EXCTRACT INTO A FOLDER!!
+ EXCTRACT THE FILE!!
 
  To see the manual click on USER-MANUAL.pdf
 
