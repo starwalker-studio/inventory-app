@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1250.0" styleClass="body-inventory" stylesheets="@../styles/inventory-style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.InventoryController">
+   <children>
+      <AnchorPane prefHeight="725.0" prefWidth="1250.0">
+         <children>
+            <BorderPane layoutX="455.0" prefHeight="737.0" prefWidth="1250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="700.0" prefWidth="361.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="673.0" prefWidth="326.0" stylesheets="@../styles/inventory-style.css">
+                           <styleClass>
+                              <String fx:value="white-form" />
+                              <String fx:value="border-form" />
+                           </styleClass>
+                           <children>
+                              <ComboBox fx:id="inv_productStatus" layoutX="23.0" layoutY="313.0" prefHeight="30.0" prefWidth="281.0" promptText="Select" />
+                              <Label alignment="CENTER" layoutX="6.0" layoutY="26.0" prefHeight="20.0" prefWidth="149.0" text="Product Code" textAlignment="CENTER" textFill="#545454" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inv_productCode" layoutX="23.0" layoutY="56.0" prefHeight="30.0" prefWidth="281.0" />
+                              <Label alignment="CENTER" layoutX="4.0" layoutY="102.0" prefHeight="20.0" prefWidth="149.0" text="Product Name" textAlignment="CENTER" textFill="#545454" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inv_productName" layoutX="23.0" layoutY="132.0" prefHeight="30.0" prefWidth="281.0" />
+                              <Label alignment="CENTER" layoutX="6.0" layoutY="279.0" prefHeight="20.0" prefWidth="322.0" text="Status" textAlignment="CENTER" textFill="#545454" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="2.0" layoutY="258.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Label alignment="CENTER" layoutX="2.0" layoutY="175.0" prefHeight="20.0" prefWidth="149.0" text="Product Brand" textAlignment="CENTER" textFill="#545454" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inv_productBrand" layoutX="23.0" layoutY="205.0" prefHeight="30.0" prefWidth="281.0" />
+                              <Label alignment="CENTER" layoutX="3.0" layoutY="388.0" prefHeight="20.0" prefWidth="149.0" text="Quantify" textAlignment="CENTER" textFill="#545454" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inv_productQuantify" layoutX="24.0" layoutY="418.0" prefHeight="30.0" prefWidth="281.0" />
+                              <Label alignment="CENTER" layoutX="3.0" layoutY="466.0" prefHeight="20.0" prefWidth="149.0" text="Price" textAlignment="CENTER" textFill="#545454" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="1.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="inv_productPrice" layoutX="24.0" layoutY="496.0" prefHeight="30.0" prefWidth="281.0" />
+                              <Separator layoutX="2.0" layoutY="371.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Separator layoutX="2.0" layoutY="547.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Button fx:id="inv_addBtn" layoutX="23.0" layoutY="569.0" mnemonicParsing="false" onAction="#productAddBtn" prefHeight="33.0" prefWidth="118.0" styleClass="add-item-button" text="Add Item" textFill="#fcfcfc">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="inv_updateBtn" layoutX="186.0" layoutY="569.0" mnemonicParsing="false" onAction="#productUpdateBtn" prefHeight="33.0" prefWidth="118.0" styleClass="update-item-button" text="Update Item" textFill="#fcfcfc">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="inv_clearBtn" layoutX="23.0" layoutY="618.0" mnemonicParsing="false" onAction="#clearSectionsBtn" prefHeight="33.0" prefWidth="118.0" styleClass="clear-button" text="Clear" textFill="#f8f8f8">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="inv_deleteBtn" layoutX="186.0" layoutY="618.0" mnemonicParsing="false" onAction="#deleteProductBtn" prefHeight="33.0" prefWidth="118.0" styleClass="delete-item-button" text="Delete Item" textFill="#f8f8f8">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="355.0" layoutY="16.0" orientation="VERTICAL" prefHeight="669.0" prefWidth="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="888.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="673.0" prefWidth="859.0" styleClass="white-form" stylesheets="@../styles/inventory-style.css">
+                           <children>
+                              <TableView fx:id="inv_tableView" layoutX="14.0" layoutY="14.0" onMouseClicked="#productSelectData" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="inv_idColumn" prefWidth="47.0" text="id" />
+                                  <TableColumn fx:id="inv_productCodeColumn" prefWidth="115.0" text="Product Code" />
+                                    <TableColumn fx:id="inv_productNameColumn" prefWidth="180.0" text="Product Name" />
+                                    <TableColumn fx:id="inv_productBrandColumn" prefWidth="115.0" text="Brand" />
+                                    <TableColumn fx:id="inv_productStatusColumn" prefWidth="93.0" text="Status" />
+                                    <TableColumn fx:id="inv_productQuantifyColumn" prefWidth="81.0" text="Quantify" />
+                                    <TableColumn fx:id="inv_productPriceColumn" prefWidth="81.0" text="Price" />
+                                    <TableColumn fx:id="inv_productDateColumn" prefWidth="144.0" text="Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <top>
+                  <MenuBar fx:id="inv_menuBar" prefHeight="15.0" prefWidth="1250.0" BorderPane.alignment="CENTER">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save As" />
+                              <MenuItem mnemonicParsing="false" onAction="#importFile" text="Import File" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+                              <MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#productShowData" text="Refresh Table" />
+                              <MenuItem mnemonicParsing="false" onAction="#clearSectionsBtn" text="Clear Fields" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                              <MenuItem mnemonicParsing="false" onAction="#userManual" text="Manual" />
+                          <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

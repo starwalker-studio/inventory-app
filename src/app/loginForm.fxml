@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.LoginController">
+   <children>
+      <BorderPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" stylesheets="@../styles/login-style.css">
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="600.0" styleClass="body-option-menu-color" stylesheets="@../styles/login-style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="lg_new_accountBtn" layoutX="173.0" layoutY="516.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="255.0" styleClass="account-button" stylesheets="@../styles/login-style.css" text="Create Account">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutY="366.0" prefHeight="26.0" prefWidth="225.0" text="You don't have an account? Register now" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/wave-store-logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="400.0" styleClass="body-input-color" stylesheets="@../styles/login-style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <PasswordField fx:id="lg_password" layoutX="91.0" layoutY="351.0" prefHeight="35.0" prefWidth="230.0" promptText="Password" />
+                  <Label alignment="CENTER" layoutX="110.0" layoutY="242.0" prefHeight="24.0" prefWidth="193.0" text="LOGIN USER" textFill="#757575" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="97.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lg_username" layoutX="91.0" layoutY="293.0" prefHeight="35.0" prefWidth="230.0" promptText="Username" />
+                  <Button fx:id="lg_logInBtn" layoutX="91.0" layoutY="410.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="35.0" prefWidth="230.0" styleClass="login-button" stylesheets="@../styles/login-style.css" text="Login">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="119.0" fitWidth="108.0" layoutX="152.0" layoutY="119.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="298.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user-account.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="356.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/key.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="signup_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="600.0" styleClass="body-option-menu-color" stylesheets="@../styles/login-style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="au_loginBtn" layoutX="173.0" layoutY="516.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="45.0" prefWidth="255.0" styleClass="account-button" stylesheets="@../styles/login-style.css" text="Login">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutY="474.0" prefHeight="26.0" prefWidth="225.0" text="Already have an account ?" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="SansSerif Regular" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutY="339.0" prefHeight="40.0" prefWidth="600.0" text="Register a new account" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="206.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/wave-store-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutY="380.0" prefHeight="40.0" prefWidth="600.0" text="be sure that your password have at least 8 characters!" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="400.0" styleClass="body-input-color" stylesheets="@../styles/login-style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <PasswordField fx:id="au_password" layoutX="91.0" layoutY="351.0" prefHeight="35.0" prefWidth="230.0" promptText="Password" />
+                  <Label alignment="CENTER" layoutX="110.0" layoutY="245.0" prefHeight="24.0" prefWidth="193.0" text="ADD USER" textFill="#757575" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="97.0">
+                     <font>
+                        <Font name="Segoe UI Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="au_username" layoutX="91.0" layoutY="293.0" prefHeight="35.0" prefWidth="230.0" promptText="Username" />
+                  <Button fx:id="au_signUpBtn" layoutX="91.0" layoutY="410.0" mnemonicParsing="false" onAction="#registerAccount" prefHeight="35.0" prefWidth="230.0" styleClass="login-button" stylesheets="@../styles/login-style.css" text="Sign Up">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="123.0" fitWidth="130.0" layoutX="139.0" layoutY="122.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add-user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="298.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user-account.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="51.0" layoutY="356.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/key.png" />
+                     </image>
+                  </ImageView>
+                  
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</StackPane>

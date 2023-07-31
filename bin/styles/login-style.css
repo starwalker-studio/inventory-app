@@ -1,0 +1,28 @@
+.body-input-color {
+	-fx-background-color: #fff;
+}
+
+.body-option-menu-color {
+	-fx-background-color: linear-gradient(#350967, #2f2f3c);
+	-fx-text-fill: #fff;
+}
+
+.login-button {
+	-fx-background-color: linear-gradient(#732dc3, #414149);
+	-fx-text-fill: #fff;
+	-fx-cursor: hand;
+}
+
+.login-button:hover {
+	-fx-background-color: linear-gradient(#350967, #2f2f3c);
+	-fx-text-fill: #fff;	
+}
+
+.account-button {
+	-fx-background-color: transparent;
+	-fx-border-color: #fff;
+	-fx-border-width: .5px;
+	-fx-text-fill: #fff;
+	-fx-border-radius: 50px;
+	-fx-cursor: hand;
+}

@@ -1,0 +1,1 @@
+INSERT INTO `user` (`user_name`,`user_password`) VALUES ('starwalker','1234');
